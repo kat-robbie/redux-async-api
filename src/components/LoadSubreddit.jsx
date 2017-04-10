@@ -5,7 +5,7 @@ import {fetchPosts} from '../actions'
 let LoadSubreddit = ({dispatch}) => (
   <div>
     <input
-      placeholder="Country"
+      placeholder="Subreddit Search"
       onKeyUp={ e => { findNews(e, dispatch) }}
     />
   </div>
