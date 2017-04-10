@@ -7,7 +7,7 @@ let LoadSubreddit = ({dispatch}) => (
     <input
       placeholder="Subreddit Search"
       onKeyUp={ e => { findNews(e, dispatch) }}
-      />
+    />
   </div>
 )
 
