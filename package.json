@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate-redux-async",
+  "name": "redux-async-api",
   "version": "0.1.0",
   "description": "React Redux with simple async action",
   "scripts": {
