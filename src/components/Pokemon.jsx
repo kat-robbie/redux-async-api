@@ -4,7 +4,6 @@ import {connect} from 'react-redux'
 import {fetchPokemon} from '../actions/PokeAPI'
 
 let Pokemon = (props) => {
-  console.log(props)
   return (
     <div>
       <input
