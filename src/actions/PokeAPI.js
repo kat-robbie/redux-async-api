@@ -1,9 +1,12 @@
 import request from 'superagent'
 
-export const receivePokemon = (pokemon) => {
+export const receivePokemon = (pokemon, id, height, type1) => {
   return {
     type: 'RECEIVE_POKEMON',
-    pokemon: pokemon.map(pokemon => pokemon.data)
+    pokemon,
+    id,
+    height,
+    type1
   }
 }
 
@@ -16,7 +19,7 @@ export function fetchPokemon (pokemon) {
           console.error(err.message)
           return
         }
-        dispatch(receivePokemon(res.body.data.children))
+        dispatch(receivePokemon(res.body.name, res.body.id, res.body.height, res.body.types[0].type.name))
       })
   }
 }
