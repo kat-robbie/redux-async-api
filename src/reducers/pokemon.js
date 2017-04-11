@@ -1,9 +1,8 @@
-function pokemon (state = [], action) {
+function pokemon (state = "", action) {
   switch (action.type) {
     case 'RECEIVE_POKEMON':
-      return [
-        ...action.pokemon
-      ]
+      console.log(action.pokemon)
+      return action.pokemon
 
     default:
       return state

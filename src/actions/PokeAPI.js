@@ -3,7 +3,7 @@ import request from 'superagent'
 export const receivePokemon = (pokemon) => {
   return {
     type: 'RECEIVE_POKEMON',
-    pokemon: pokemon.map(pokemon => pokemon.data)
+    pokemon
   }
 }
 
@@ -16,7 +16,7 @@ export function fetchPokemon (pokemon) {
           console.error(err.message)
           return
         }
-        dispatch(receivePokemon(res.body.data.children))
+        dispatch(receivePokemon(res.body.name))
       })
   }
 }
